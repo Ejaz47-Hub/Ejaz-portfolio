@@ -1,0 +1,26 @@
+[
+  {
+    "title": "BRAINWAVE",
+    "imageSrc": "projects/BrainWave.png",
+    "description": "This is a project made to learn how Can you Learn Generative AI by building an website.",
+    "skills": ["React", "Node"],
+    "demo": "https://lambent-twilight-87c86f.netlify.app/",
+    "source": "https://github.com/Ejaz47-Hub/BRAINWAVE"
+  },
+  {
+    "title": "HooBank",
+    "imageSrc": "projects/HooBank.png",
+    "description": "This is a project made to learn  how we get paying through Cards and all about online payment.",
+    "skills": ["React","Node"],
+    "demo": "https://boisterous-gelato-19d9af.netlify.app/",
+    "source": "https://github.com/Ejaz47-Hub/HooBank"
+  },
+  {
+    "title": "AWARD WINNING",
+    "imageSrc": "projects/REDEFINE.png",
+    "description": "This is a project made to learn how to build award winning website with full of animations.",
+    "skills": ["React","Node"],
+    "demo": "https://effervescent-croquembouche-3db6eb.netlify.app/",
+    "source": "https://github.com/Ejaz47-Hub/AWARD-WINNIGN"
+  }
+]
