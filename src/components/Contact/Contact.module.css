@@ -3,27 +3,63 @@
 .container {
   color: var(--color-text);
   margin-top: 120px;
-  background-color: var(--color-secondary);
+  background: linear-gradient(145deg, #1e2746, var(--color-secondary));
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   width: 100vw;
   padding: 58px 10%;
   gap: 10px;
+  position: relative;
+  overflow: hidden;
+  animation: fadeSlideUp 1s ease-in-out both;
+}
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .text h2 {
   font-size: 70px;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 4px;
   font-family: var(--font-roboto);
+  background: linear-gradient(90deg, #89c9ec, #6e8efb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+  animation: glowIn 1.5s ease-in-out forwards;
+  opacity: 0;
 }
 
 .text p {
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 400;
   letter-spacing: 2px;
   font-family: var(--font-roboto);
+  color: #d0d0d0;
+  animation: fadeIn 1.6s ease-in-out forwards;
+  opacity: 0;
+}
+
+@keyframes glowIn {
+  to {
+    opacity: 1;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.25);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
 
 .links {
@@ -33,6 +69,16 @@
   list-style: none;
   gap: 26px;
   font-family: var(--font-roboto);
+  animation: fadeInUp 1.8s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .link {
@@ -40,6 +86,11 @@
   align-items: center;
   gap: 25px;
   font-family: var(--font-roboto);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.link:hover {
+  transform: translateX(10px);
 }
 
 .link a {
@@ -49,24 +100,28 @@
   font-weight: 400;
   letter-spacing: 1.5px;
   font-family: var(--font-roboto);
+  transition: color 0.3s ease;
+}
+
+.link a:hover {
+  color: #89c9ec;
 }
 
 @media screen and (max-width: 830px) {
   .container {
     flex-direction: column;
-    font-family: var(--font-roboto);
-    gap: 23px;
+    gap: 32px;
+    padding: 48px 6%;
+    text-align: center;
   }
 
   .text {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: var(--font-roboto);
   }
 
   .links {
     align-items: center;
-    font-family: var(--font-roboto);
   }
 }
